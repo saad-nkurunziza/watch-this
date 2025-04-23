@@ -3,6 +3,7 @@ import { Toaster } from "sonner";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Navbar } from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Toaster position="top-center" />
         <Navbar isLoggedIn={true} />
         <main className="container px-4 md:px-6">{children}</main>
+        <Analytics />
       </body>
     </html>
   );

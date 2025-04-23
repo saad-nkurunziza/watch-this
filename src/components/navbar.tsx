@@ -52,12 +52,14 @@ export function Navbar({ isLoggedIn = false }: NavbarProps) {
               >
                 New & Popular
               </Link>
-              <Link
-                href="/my-list"
-                className=" hover:text-muted-foreground transition"
-              >
-                My List
-              </Link>
+              {isLoggedIn && (
+                <Link
+                  href="/my-list"
+                  className=" hover:text-muted-foreground transition"
+                >
+                  My List
+                </Link>
+              )}
             </nav>
           )}
         </div>

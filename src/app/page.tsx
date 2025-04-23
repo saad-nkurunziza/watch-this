@@ -3,7 +3,6 @@ import { Footer } from "@/components/footer";
 import { fetchMedia, fetchTrending, fetchByGenre } from "@/lib/media";
 import { MovieInterface, TvInterface } from "@/lib/tmdb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 export default async function Home() {
   // Hero section
   const hero_media = (await fetchTrending("all", "day"))[0] as
